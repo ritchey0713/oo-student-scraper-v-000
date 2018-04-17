@@ -6,7 +6,7 @@ class Student
 
   def initialize(student_hash)
     student_hash.each {|info, link|self.send "#{info}=", "#{link}"}
-    self.class.all 
+    self.class.all << self 
     
   end
 
