@@ -39,8 +39,7 @@ class Scraper
   end
 end 
 social_sites
-end 
-end 
+
     
     
     
