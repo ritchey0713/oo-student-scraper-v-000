@@ -25,14 +25,22 @@ class Scraper
     social_media.each do |social_media_site|
       link = social_media_site.attribute('href').value
       if link.include?("twitter")
-        profile[:twitter] = link
+        social_sites[:twitter] = link
       elsif link.include?("linkedin")
-        profile[:linkedin] = link
+        social_sites[:linkedin] = link
       elsif link.include?("github")
-        profile[:github] = link
+        social_sites[:github] = link
       else
-        profile[:blog] = link
+        social_sites[:blog] = link
       end
     end
-    profile[:profile_quote] = doc.css(".profile-quote").text
-    profile[:bio] = doc.css(".description-holder p").text
+    social_sites[:profile_quote] = doc.css(".profile-quote").text
+    social_sites[:bio] = doc.css(".description-holder p").text
+    
+    
+    
+    
+    
+    
+    
+    
