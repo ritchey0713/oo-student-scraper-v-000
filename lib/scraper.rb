@@ -36,9 +36,9 @@ class Scraper
     end
     social_sites[:profile_quote] = doc.css(".profile-quote").text
     social_sites[:bio] = doc.css(".description-holder p").text
-  end
-end 
+
 social_sites
+
 
     
     
